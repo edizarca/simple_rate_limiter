@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    rate_limiter (0.1.6)
+    simple_rate_limiter (0.1.6)
       redis (~> 4.2.2)
 
 GEM
@@ -49,8 +49,8 @@ PLATFORMS
 DEPENDENCIES
   activesupport
   rake (~> 12.0)
-  rate_limiter!
   rspec (~> 3.0)
+  simple_rate_limiter!
   simplecov
 
 BUNDLED WITH
