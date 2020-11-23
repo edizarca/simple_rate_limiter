@@ -1,5 +1,5 @@
 require 'active_support'
-require 'rate_limiter'
+require 'simple_rate_limiter'
 
 RSpec.describe RateLimiter do
   it "has a version number" do

@@ -1,6 +1,6 @@
 # RateLimiter
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/rate_limiter`. To experiment with that code, run `bin/console` for an interactive prompt.
+Welcome to my first gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/simple_rate_limiter`. To experiment with that code, run `bin/console` for an interactive prompt.
 
 TODO: Delete this and the text above, and describe your gem
 
@@ -9,7 +9,7 @@ TODO: Delete this and the text above, and describe your gem
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'rate_limiter'
+gem 'simple_rate_limiter'
 ```
 
 And then execute:
@@ -18,11 +18,17 @@ And then execute:
 
 Or install it yourself as:
 
-    $ gem install rate_limiter
+    $ gem install simple_rate_limiter
 
 ## Usage
 
-TODO: Write usage instructions here
+```ruby
+redis = Redis.new
+redis_record_repository = RateLimiter::Repositories::RedisRecordRepository.build(redis)
+rate_limiter = RateLimiter::Service.new(redis_record_repository)
+
+limited = rate_limiter.check('create_user', 'unique_user_identifier', 3, 30, 2)
+```
 
 ## Development
 
@@ -32,12 +38,13 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/rate_limiter. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [code of conduct](https://github.com/[USERNAME]/rate_limiter/blob/master/CODE_OF_CONDUCT.md).
+Bug reports and pull requests are welcome on GitHub at https://github.com/edizarca/simple_rate_limiter. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [code of conduct](https://github.com/[USERNAME]/rate_limiter/blob/master/CODE_OF_CONDUCT.md).
 
 
 ## License
 
-The gem is available as open source under the terms of the [MIT License](https://opensource.org/licenses/MIT).
+The gem is available as open source under the terms of the                    GNU GENERAL PUBLIC LICENSE
+                                                                                 Version 3, 29 June 2007
 
 ## Code of Conduct
 
