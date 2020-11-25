@@ -1,8 +1,8 @@
-RSpec.describe RateLimiter::Domain::RateLimit do
+RSpec.describe SimpleRateLimiter::Domain::RateLimit do
   before(:each) do
     rate_limit = 3
     limit_period = 30
-    @rate_limit = RateLimiter::Domain::RateLimit.new(rate_limit, limit_period)
+    @rate_limit = SimpleRateLimiter::Domain::RateLimit.new(rate_limit, limit_period)
   end
 
   it 'rate limit is not exceeded with 1 record' do

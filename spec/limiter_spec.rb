@@ -1,11 +1,11 @@
-RSpec.describe RateLimiter::Domain::Limiter do
+RSpec.describe SimpleRateLimiter::Domain::Limiter do
   before(:each) do
     route_name = 'test_name'
     user_id = 'test_id'
     rate_limit = 3
     punishment_factor = 2
     limit_period = 30
-    @limiter = RateLimiter::Domain::Limiter.new(route_name, user_id, rate_limit, punishment_factor, limit_period)
+    @limiter = SimpleRateLimiter::Domain::Limiter.new(route_name, user_id, rate_limit, punishment_factor, limit_period)
   end
 
   it 'assigns id by adding route_name and user_id together'do

@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    simple_rate_limiter (0.1.8)
+    simple_rate_limiter (0.2.0)
       redis (~> 4.2.2)
 
 GEM
@@ -20,7 +20,7 @@ GEM
       concurrent-ruby (~> 1.0)
     minitest (5.14.2)
     rake (12.3.3)
-    redis (4.2.2)
+    redis (4.2.5)
     rspec (3.9.0)
       rspec-core (~> 3.9.0)
       rspec-expectations (~> 3.9.0)

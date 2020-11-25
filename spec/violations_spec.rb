@@ -1,11 +1,11 @@
 require 'domain/violations'
 
-RSpec.describe RateLimiter::Domain::Violations do
+RSpec.describe SimpleRateLimiter::Domain::Violations do
 
   before(:each) do
     punishment_factor = 2
     limit_period = 30
-    @violations = RateLimiter::Domain::Violations.new(punishment_factor, limit_period)
+    @violations = SimpleRateLimiter::Domain::Violations.new(punishment_factor, limit_period)
   end
 
   it 'violations exists' do
@@ -104,7 +104,7 @@ RSpec.describe RateLimiter::Domain::Violations do
 
     punishment_factor = 3
     limit_period = 45
-    @violations = RateLimiter::Domain::Violations.new(punishment_factor, limit_period)
+    @violations = SimpleRateLimiter::Domain::Violations.new(punishment_factor, limit_period)
 
     expect(@violations.expired?(violation_records, time)).to eq(true)
 
@@ -118,7 +118,7 @@ RSpec.describe RateLimiter::Domain::Violations do
 
     punishment_factor = 3
     limit_period = 45
-    @violations = RateLimiter::Domain::Violations.new(punishment_factor, limit_period)
+    @violations = SimpleRateLimiter::Domain::Violations.new(punishment_factor, limit_period)
 
     expect(@violations.expired?(violation_records, time)).to eq(false)
 

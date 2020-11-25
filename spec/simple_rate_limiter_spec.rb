@@ -1,14 +1,14 @@
 require 'active_support'
 require 'simple_rate_limiter'
 
-RSpec.describe RateLimiter do
+RSpec.describe SimpleRateLimiter do
   it "has a version number" do
     expect(RateLimiter::VERSION).not_to be nil
   end
 
   before(:each) do
     @mock_record_repository = double('record_repository')
-    @rate_limiter = RateLimiter::Service.new(@mock_record_repository)
+    @rate_limiter = SimpleRateLimiter::Service.new(@mock_record_repository)
   end
 
   it 'limiter was violated' do

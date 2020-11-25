@@ -15,7 +15,7 @@ module SimpleRateLimiter
         result = @redis.set('test', test_hash)
         received = @redis.get('test')
         unless result == 'OK' && received == test_hash
-          raise RateLimiter::Application::Exceptions::RedisConnectionException, 'redis connection unsuccessful, make sure redis is installed and configuration variables are set'
+          raise SimpleRateLimiter::Application::Exceptions::RedisConnectionException, 'redis connection unsuccessful, make sure redis is installed and configuration variables are set'
         end
       end
 
