@@ -29,10 +29,10 @@ Or install it yourself as:
 
 ```ruby
 redis = Redis.new
-redis_record_repository = RateLimiter::Repositories::RedisRecordRepository.build(redis)
-rate_limiter = RateLimiter::Service.new(redis_record_repository)
+redis_record_repository = SimpleRateLimiter::Repositories::RedisRecordRepository.build(redis)
+rate_limiter = SimpleRateLimiter::Service.new(redis_record_repository)
 
-limited = rate_limiter.check('create_user', 'unique_user_identifier', 3, 30, 2)
+limited = rate_limiter.check('create_user', 'unique_user_identifier', 3, 30, 2) # returns true if limited
 ```
 
 ## Development
