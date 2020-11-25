@@ -1,2 +1,7 @@
 /vendor/*
+/coverage/*
+/.bundle/*
 .idea/*
+.Gemfile.lock
+*.gem
+.rspec_status

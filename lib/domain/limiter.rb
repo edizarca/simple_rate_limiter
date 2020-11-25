@@ -1,7 +1,7 @@
 require 'domain/violations'
 require 'domain/rate_limit'
 
-module RateLimiter
+module SimpleRateLimiter
   module Domain
     class Limiter
       def initialize(route_name, user_id, rate_limit, punishment_factor, limit_period)

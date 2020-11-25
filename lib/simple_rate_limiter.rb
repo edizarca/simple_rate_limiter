@@ -1,7 +1,7 @@
 require 'repositories/violation_repository'
 require 'domain/limiter'
 
-module RateLimiter
+module SimpleRateLimiter
   class Error < StandardError; end
 
   class Service
@@ -9,7 +9,7 @@ module RateLimiter
 
     def initialize(record_repository)
       @record_repository = record_repository
-      @violation_repository = RateLimiter::Repositories::ViolationRepository.new(record_repository)
+      @violation_repository = SimpleRateLimiter::Repositories::ViolationRepository.new(record_repository)
     end
 
     def check(route_name, user_id, rate_limit, limit_period, punishment_factor)

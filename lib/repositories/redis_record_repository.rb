@@ -2,7 +2,7 @@ require 'redis'
 require 'application/exceptions/redis_connection_error'
 require 'securerandom'
 
-module RateLimiter
+module SimpleRateLimiter
   module Repositories
     class RedisRecordRepository
       def initialize(redis, random)

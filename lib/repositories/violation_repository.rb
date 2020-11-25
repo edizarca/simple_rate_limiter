@@ -1,5 +1,5 @@
 
-module RateLimiter
+module SimpleRateLimiter
   module Repositories
     class ViolationRepository
       def initialize(record_repository)

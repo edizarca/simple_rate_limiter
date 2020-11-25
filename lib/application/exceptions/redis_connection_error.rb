@@ -1,4 +1,4 @@
-module RateLimiter
+module SimpleRateLimiter
   module Application
     module Exceptions
       class RedisConnectionException < StandardError

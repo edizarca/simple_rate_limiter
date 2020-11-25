@@ -1,4 +1,4 @@
-module RateLimiter
+module SimpleRateLimiter
   module Domain
     class RateLimit
       def initialize(rate_limit, limit_period)

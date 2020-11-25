@@ -1,8 +1,13 @@
 # RateLimiter
 
-Welcome to my first gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/simple_rate_limiter`. To experiment with that code, run `bin/console` for an interactive prompt.
+Welcome to my first gem! This is a simple rate limiting gem. 
 
-TODO: Delete this and the text above, and describe your gem
+Simple Rate Limiter can limit the usage of a resource by an actor according to parameters provided. 
+If an actor exceeds the pre-determined limit the limiter returns true.
+On repeated violations, the punishment is increased incrementally according to the punishment factor parameter.
+If an actor doesn't violate the resource limit for the same time period of the limitation after it expires, the punishment level is decreased for the actor.
+
+
 
 ## Installation
 

@@ -1,4 +1,4 @@
-module RateLimiter
+module SimpleRateLimiter
   module Domain
     class Violations
       def initialize(punishment_factor, limit_period)
