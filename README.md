@@ -1,4 +1,4 @@
-# RateLimiter
+# SimpleRateLimiter
 
 Welcome to my first gem! This is a simple rate limiting gem. 
 
