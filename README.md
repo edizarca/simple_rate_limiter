@@ -1,4 +1,5 @@
 # SimpleRateLimiter
+[![Build Status](https://travis-ci.org/edizarca/simple_rate_limiter.svg?branch=main)](https://travis-ci.org/edizarca/simple_rate_limiter)
 
 Welcome to my first gem! This is a simple rate limiting gem. 
 
